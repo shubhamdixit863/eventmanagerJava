@@ -1,0 +1,11 @@
+
+target/EventManager-0.0.1-SNAPSHOT.jar
+target/EventManager-0.0.1-SNAPSHOT.jar.original
+target/classes/application.properties
+target/classes/application.properties
+target/maven-archiver/pom.properties
+target/classes/com/example/model/LoginDetails.class
+target/classes/com/example/model/Shift.class
+target/classes/com/example/model/Volunteer.class
+*.class
+target/classes/META-INF/maven/com.example.event/EventManager/pom.properties
