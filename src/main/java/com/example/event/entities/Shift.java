@@ -45,13 +45,19 @@ public class Shift {
 	}
 
 
-	@JsonManagedReference
+
 	@OneToMany(mappedBy = "shift", fetch = FetchType.LAZY,
 			cascade = CascadeType.ALL)
 	private Set<ShiftPosition> shiftPosition
 	;
+	@JsonManagedReference
+	public Set<ShiftPosition> getShiftPosition() {
+		return shiftPosition;
+	}
 
-
+	public void setShiftPosition(Set<ShiftPosition> shiftPosition) {
+		this.shiftPosition = shiftPosition;
+	}
 
 	public int getId() {
 		return id;

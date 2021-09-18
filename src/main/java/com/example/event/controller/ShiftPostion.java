@@ -50,7 +50,7 @@ public class ShiftPostion {
 
 
     @DeleteMapping("/ShiftPosition/{id}")
-    public boolean deleteShift(@PathVariable Integer id) {
+    public boolean deleteShift(@PathVariable Long id) {
         return shiftPositionService.deleteShiftPosition(id);
     }
 }

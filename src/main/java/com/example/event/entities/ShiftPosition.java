@@ -8,8 +8,8 @@ import javax.persistence.*;
 public class ShiftPosition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @JsonBackReference
+    private long id;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "shiftposition_id", nullable = false)
     private Shift shift;
@@ -22,10 +22,10 @@ public class ShiftPosition {
         return assigned;
     }
 
-    private String getEventName()
+    private String getDescription()
     {
 
-        return shift.getEventName();
+        return shift.getDescription();
 
     }
 
@@ -33,14 +33,14 @@ public class ShiftPosition {
         this.assigned = assigned;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
-
+    @JsonBackReference
     public Shift getShift() {
         return shift;
     }
