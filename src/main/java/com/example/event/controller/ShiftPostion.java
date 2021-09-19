@@ -36,17 +36,17 @@ public class ShiftPostion {
     public List<ShiftPosition> getShiftPositionByShiftId(@PathVariable Integer shiftId) throws Exception {
         return shiftPositionService.getShiftPositionByShiftId(shiftId);
     }
-/*
+
     @PutMapping("/ShiftPosition")
-    public Shift updateShift(@RequestBody ShiftModel v) {
+    public ShiftPosition updateShift(@RequestBody ShiftPositionModel v) {
         try {
-            return service.updateShift(v);
+            return shiftPositionService.updateShiftPosition(v);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return  null;
     }
-    */
+
 
 
     @DeleteMapping("/ShiftPosition/{id}")

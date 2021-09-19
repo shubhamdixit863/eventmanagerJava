@@ -10,6 +10,7 @@ public class ShiftPosition {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "shiftposition_id", nullable = false)
     private Shift shift;
