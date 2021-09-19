@@ -1,29 +1,50 @@
 package com.example.event.entities;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Volunteer {
-	
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String mobile;
 	private String firstName;
 	private String lastName;
-	@JsonFormat(pattern="dd-MM-yyyy")
+
 	private Date dob;
 	private String address1;
-	private String adrress2;
+	private String address2;
 	private String town;
 	private String city;
 	private String county;
 	private String email;
-	private ArrayList<String> skills;
+	private String postcode;
+
+	public String getPostcode() {
+		return postcode;
+	}
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	//private ArrayList<String> skills;
 	public String getFirstName() {
 		return firstName;
 	}
@@ -48,12 +69,15 @@ public class Volunteer {
 	public void setAddress1(String address1) {
 		this.address1 = address1;
 	}
-	public String getAdrress2() {
-		return adrress2;
+
+	public String getAddress2() {
+		return address2;
 	}
-	public void setAdrress2(String adrress2) {
-		this.adrress2 = adrress2;
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
 	}
+
 	public String getTown() {
 		return town;
 	}
@@ -84,13 +108,16 @@ public class Volunteer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	/*
 	public ArrayList<String> getSkills() {
 		return skills;
 	}
 	public void setSkills(ArrayList<String> skills) {
 		this.skills = skills;
 	}
-	
+
+
+	 */
 	
 	
 

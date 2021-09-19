@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.example.event.entities.Volunteer;
 
 @Repository
-public interface VolunteerRepository extends CrudRepository<Volunteer, String>{
+public interface VolunteerRepository extends CrudRepository<Volunteer, Long>{
 	
 	
 

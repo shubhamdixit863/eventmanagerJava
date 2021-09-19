@@ -20,9 +20,9 @@ public class VolunteerService
 		return repo.save(v);
 	}
 
-	public Volunteer getVolunteer(String mobile) {
+	public Volunteer getVolunteer(long id) {
 
-		Optional<Volunteer> e= repo.findById(mobile);
+		Optional<Volunteer> e= repo.findById(id);
 		if(e.isPresent())
 		{
 			return e.get();
@@ -38,11 +38,11 @@ public class VolunteerService
 		return repo.save(v);
 	}
 
-	public boolean deleteVolunteer(String mobile) {
+	public boolean deleteVolunteer(long id) {
 		
-		if(repo.existsById(mobile))
+		if(repo.existsById(id))
 		{
-			repo.deleteById(mobile);
+			repo.deleteById(id);
 			return true;
 		}
 		return false;

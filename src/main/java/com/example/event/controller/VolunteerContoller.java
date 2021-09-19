@@ -24,10 +24,10 @@ public class VolunteerContoller {
 		return service.createVolunteer(v);
 	}
 	
-	@GetMapping("/volunteer/{mobile}")
-	public Volunteer getVolunteer(@PathVariable String mobile)
+	@GetMapping("/volunteer/{id}")
+	public Volunteer getVolunteer(@PathVariable long id)
 	{
-		return service.getVolunteer(mobile);
+		return service.getVolunteer(id);
 	}
 	
 	
@@ -43,12 +43,12 @@ public class VolunteerContoller {
 		return service.updateVolunteer(v);
 	}
 	
-	@DeleteMapping("/volunteer/{mobile}")
-	public boolean deleteVolunteer(@PathVariable String mobile)
+	@DeleteMapping("/volunteer/{id}")
+	public boolean deleteVolunteer(@PathVariable long id)
 	{
-		 return service.deleteVolunteer(mobile);
+		 return service.deleteVolunteer(id);
 	}
-	
+
 	
 
 }
