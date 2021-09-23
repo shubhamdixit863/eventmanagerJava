@@ -1,6 +1,7 @@
 package com.example.event.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 
@@ -14,6 +15,9 @@ public class ShiftPosition {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "shiftposition_id", nullable = false)
     private Shift shift;
+
+
+
 
     private  String role;
 

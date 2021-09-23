@@ -2,10 +2,12 @@ package com.example.event.services;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.Optional;
 
 import com.example.event.models.EventModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.event.entities.Event;
@@ -85,9 +87,9 @@ public class EventService
 
 	}
 
-	public Iterable<Event> getEvenList()
+	public List<Event> getEvenList()
 	{
-		return repo.findAll();
+		return repo.findAll(Sort.by(Sort.Direction.ASC, "title"));
 
 	}
 

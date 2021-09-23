@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import com.example.event.models.ShiftModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.event.entities.Shift;
@@ -97,9 +98,9 @@ public class ShiftService {
 		return null;
 	}
 
-	public Iterable<Shift> getShiftList() {
+	public List<Shift> getShiftList() {
 		// TODO Auto-generated method stub
-		return repo.findAll();
+		return repo.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
 
 }

@@ -22,27 +22,27 @@ public class ShiftController {
 	@Autowired
 	ShiftService service;
 
-	@PostMapping("/Shift")
+	@PostMapping("/shift")
 	public Shift createShift(@RequestBody ShiftModel v) throws Exception {
 		return service.createShift(v);
 	}
 
-	@GetMapping("/Shift/{id}")
+	@GetMapping("/shift/{id}")
 	public Shift getShift(@PathVariable Integer id) {
 		return service.getShift(id);
 	}
 
-	@GetMapping("/Shift")
-	public Iterable<Shift> getShiftList() {
+	@GetMapping("/shift")
+	public  List<Shift> getShiftList() {
 		return service.getShiftList();
 	}
 
-	@GetMapping("/ShiftByEventID/{eventId}")
+	@GetMapping("/shiftByEventID/{eventId}")
 	public List<Shift> getShiftByEventID(@PathVariable Integer eventId) throws Exception {
 		return service.ShiftByEventID(eventId);
 	}
 
-	@PutMapping("/Shift")
+	@PutMapping("/shift")
 	public Shift updateShift(@RequestBody ShiftModel v) {
 		try {
 			return service.updateShift(v);
@@ -52,7 +52,7 @@ public class ShiftController {
 		return  null;
 	}
 
-	@DeleteMapping("/Shift/{id}")
+	@DeleteMapping("/shift/{id}")
 	public boolean deleteShift(@PathVariable Integer id) {
 		return service.deleteShift(id);
 	}

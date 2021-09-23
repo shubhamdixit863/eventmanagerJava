@@ -14,6 +14,7 @@ import com.example.event.models.EventModel;
 import com.example.event.services.EventService;
 
 import java.text.ParseException;
+import java.util.List;
 
 @RestController
 public class EventController
@@ -39,7 +40,7 @@ public class EventController
 		return service.getEventbyId(id);
 	}
 	@GetMapping("/event")
-	public Iterable<Event> getEventList()
+	public List<Event> getEventList()
 	{
 		return service.getEvenList();
 	}
