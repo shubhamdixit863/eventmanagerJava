@@ -27,6 +27,7 @@ public class ShiftPositionService {
         shiftPosition1.setShift(shiftRepository.findById(shiftPosition.getShiftId()).get());
         shiftPosition1.setAssigned(shiftPosition.getAssigned());
         shiftPosition1.setRole(shiftPosition.getRole());
+        shiftPosition1.setAssignedUsername(shiftPosition.getAssignedUsername());
        return shiftPositionRepository.save(shiftPosition1);
     }
 
@@ -36,6 +37,7 @@ public class ShiftPositionService {
         ShiftPosition shiftPosition =shiftPositionRepository.findById(v.getId()).get();
         shiftPosition.setRole(v.getRole());
         shiftPosition.setAssigned(v.getAssigned());
+        shiftPosition.setAssignedUsername(v.getAssignedUsername());
 
         return shiftPositionRepository.save(shiftPosition);
     }

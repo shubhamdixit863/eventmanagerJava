@@ -22,6 +22,15 @@ public class ShiftPosition {
     private  String role;
 
     private String assigned;
+    private String assignedUsername;
+
+    public String getAssignedUsername() {
+        return assignedUsername;
+    }
+
+    public void setAssignedUsername(String assignedUsername) {
+        this.assignedUsername = assignedUsername;
+    }
 
     public String getAssigned() {
         return assigned;

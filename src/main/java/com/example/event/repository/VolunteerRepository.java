@@ -7,6 +7,8 @@ import com.example.event.entities.Volunteer;
 
 @Repository
 public interface VolunteerRepository extends CrudRepository<Volunteer, Long>{
+
+    public Volunteer findByEmail(String email);
 	
 	
 

@@ -7,6 +7,16 @@ public class ShiftPositionModel {
 
     private String assigned;
 
+    private String assignedUsername;
+
+    public String getAssignedUsername() {
+        return assignedUsername;
+    }
+
+    public void setAssignedUsername(String assignedUsername) {
+        this.assignedUsername = assignedUsername;
+    }
+
     private Integer shiftId;
 
     public Long getId() {

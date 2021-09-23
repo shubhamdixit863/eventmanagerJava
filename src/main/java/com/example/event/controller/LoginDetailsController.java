@@ -1,5 +1,6 @@
 package com.example.event.controller;
 
+import com.example.event.models.LoginDetailsModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,7 @@ public class LoginDetailsController {
 	}
 
 	@PostMapping("/createcred")
-	public boolean addNewCredentials(@RequestBody LoginDetails cred)
+	public boolean addNewCredentials(@RequestBody LoginDetailsModel cred)
 	{
 		return service.createCredentails(cred);
 	}
